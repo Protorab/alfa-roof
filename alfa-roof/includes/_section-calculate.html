@@ -1,0 +1,100 @@
+<!-- @format -->
+<!-- section-calculate -->
+<section class="section calculate__section">
+  <div class="wrapper calculate__wrapper">
+    <div class="title title-calculate">
+      <h3>Бесплатно рассчитаем стоимость вашей кровли</h3>
+    </div>
+    <!-- @format -->
+<!-- form-calculate -->
+<form action="" class="calculate__form">
+  <input type="hidden" name="form__name" value="форма на приглашения" />
+  <input class="input input-calculate" required placeholder="Имя" type="text" />
+  <input
+    class="input telephone input-calculate"
+    required
+    placeholder="Телефон"
+    type="tel"
+  />
+  <input
+    class="input input-calculate"
+    required
+    placeholder="E-mail"
+    type="email"
+  />
+  <input id="calculate__submit" type="submit" />
+  <div class="custom-select-wrapper">
+    <input type="hidden" name="type" />
+    <div class="custom-select">
+      <div class="custom-select__trigger">
+        <span>Тип кровли</span>
+        <div class="arrow"></div>
+      </div>
+      <div class="custom-options">
+        <span class="custom-option selected" data-value="Тип кровли">
+          Тип кровли
+        </span>
+        <span class="custom-option" data-value="Односкатная">
+          Односкатная
+        </span>
+        <span class="custom-option" data-value="Двускатная"> Двускатная </span>
+        <span class="custom-option" data-value="Вальмовая "> Вальмовая </span>
+        <span class="custom-option" data-value="Мансардная"> Мансардная </span>
+      </div>
+    </div>
+  </div>
+  <div class="custom-select-wrapper">
+    <input type="hidden" name="material" />
+    <div class="custom-select">
+      <div class="custom-select__trigger">
+        <span>Материал</span>
+        <div class="arrow"></div>
+      </div>
+      <div class="custom-options">
+        <span class="custom-option selected" data-value="Материал">
+          Материал
+        </span>
+        <span class="custom-option" data-value="Керамическая">
+          Керамическая
+        </span>
+        <span class="custom-option" data-value="Металлаческая">
+          Металлаческая
+        </span>
+        <span class="custom-option" data-value="Песчано-цементная  ">
+          Песчано-цементная
+        </span>
+        <span class="custom-option" data-value="Другой вариант">
+          Другой вариант
+        </span>
+      </div>
+    </div>
+  </div>
+  <input
+    class="input input-calculate"
+    required
+    placeholder="Площадь (см²)"
+    type="text"
+  />
+  <label for="calculate__submit" class="btn btn-calculate"
+    >Узнать стоимость</label
+  >
+  <img
+    src="img/payment/payment-decor.png"
+    alt=""
+    class="img__bg img__bg-calculate__form"
+  />
+</form>
+
+  </div>
+  <img
+    src="img/payment/payment-bg.png"
+    alt=""
+    class="img__bg img__bg-calculate"
+  />
+  <img
+    loading="lazy"
+    src="img/Arrow-alt.png"
+    alt="arrow"
+    class="img__bg img__bg-arrow"
+  />
+</section>

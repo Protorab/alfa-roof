@@ -349,6 +349,11 @@ textarea {
   &-wrapper {
     justify-content: space-between;
     align-items: center;
+
+    @media only screen and (max-width : 800px) {
+      flex-direction: column;
+    }
+
   }
 
   // .header-side {}
@@ -357,12 +362,35 @@ textarea {
     justify-content: space-between;
     align-items: center;
 
+    @media only screen and (max-width : 800px) {
+      width: 100%;
+    }
+
+    @media only screen and (max-width : 600px) {
+      flex-direction: column;
+    }
+
+
   }
 
   // .header-logo {}
   &-logo {
-    @include adaptive(width, 200, 30, 0);
+    @include adaptive(width, 200, 150, 0);
+    @include adaptive(min-width, 200, 150, 0);
+
     margin-right: 5px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    @media only screen and (max-width : 600px) {
+      align-self: flex-start;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
   }
 
 
@@ -370,6 +398,12 @@ textarea {
   // .header-links  
   &-links {
     @include adaptive(margin-right, 20, 10, 0);
+
+    @media only screen and (max-width : 600px) {
+      margin-right: 0;
+      align-self: flex-start;
+    }
+
   }
 }
 
@@ -391,6 +425,11 @@ textarea {
       font-size: 12px;
       text-transform: uppercase;
     }
+
+    @media only screen and (max-width : 800px) {
+      display: none;
+    }
+
   }
 }
 
@@ -472,8 +511,16 @@ textarea {
 
   }
 
+  // .btn-header
   &-header {
     @include adaptive(width, 160, 20, 0);
+    width: 160px;
+
+    @media only screen and (max-width : 600px) {
+      align-self: flex-end;
+      margin-bottom: 10px;
+    }
+
   }
 
   // .btn-form
@@ -484,6 +531,10 @@ textarea {
   // .btn-test
   &-test {
     @include adaptive(width, 300, 200, 0);
+
+    @media only screen and (max-width : 600px) {
+      width: 100%;
+    }
 
   }
 
@@ -515,6 +566,12 @@ textarea {
   &-more {
     width: 260px;
     margin-left: 25px;
+
+    @media only screen and (max-width : 600px) {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+
   }
 }
 
@@ -563,7 +620,12 @@ textarea {
 
   // .top__wrapper
 
-  &__wrapper {}
+  &__wrapper {
+    @media only screen and (max-width : 800px) {
+      flex-direction: column;
+    }
+
+  }
 
   // .top__side
 
@@ -576,7 +638,16 @@ textarea {
     &-content {
       width: 100%;
       @include adaptive(max-width, 520, 350, 0);
+
+      @media only screen and (max-width : 800px) {
+        max-width: 100%;
+      }
     }
+
+    @media only screen and (max-width : 800px) {
+      width: 100%;
+    }
+
   }
 
   // .top__title
@@ -703,11 +774,33 @@ textarea {
     &-steps {
       top: 250px;
       bottom: auto;
+
+      @media only screen and (max-width : 1369px) {
+        display: none;
+      }
+
     }
 
+    &_test {
+      @media only screen and (max-width : 1280px) {
+        display: none;
+      }
+
+    }
+
+    // .img__bg-arrow-review
     &-review {
       top: 70px;
       bottom: auto;
+
+      @media only screen and (max-width : 1440px) {
+        top: 0;
+      }
+
+      @media only screen and (max-width : 600px) {
+        display: none;
+      }
+
     }
 
     // img__bg-arrow-team
@@ -726,7 +819,17 @@ textarea {
       &_bottom {
         bottom: 0;
       }
+
+      @media only screen and (max-width : 1440px) {
+        display: none;
+      }
+
     }
+
+    @media only screen and (max-width : 600px) {
+      display: none;
+    }
+
   }
 
   // img__bg-custom
@@ -741,7 +844,13 @@ textarea {
 
     // img__bg-decor-test
     &-test {
-      bottom: -150px
+      bottom: -150px;
+      @include _widthVw(436);
+
+      @media only screen and (max-width : 800px) {
+        bottom: 0;
+      }
+
     }
 
     // .img__bg-decor-team
@@ -750,21 +859,34 @@ textarea {
       @include _widthVw(120);
       height: auto;
 
-      // img__bg-decor-team
+      // .img__bg-decor-team-bottom
       &-bottom {
         right: 0;
         bottom: -400px;
+        @include _widthVw(480);
+
+        @media only screen and (max-width : 800px) {
+          bottom: -200px;
+        }
+
+
       }
     }
   }
 
-  // img__bg-visit_room
+  // .img__bg-visit_room
   &-visit_room {
     width: 100%;
     height: auto;
     z-index: -1;
     left: 0;
     top: -200px;
+
+    @media only screen and (max-width : 800px) {
+      top: 0px;
+
+    }
+
   }
 
   // img__bg-calculate
@@ -772,12 +894,29 @@ textarea {
     width: 100%;
     height: auto;
     bottom: -300px;
+
+    @media only screen and (max-width : 1369px) {
+      bottom: -200px;
+
+    }
+
+    @media only screen and (max-width : 800px) {
+      bottom: -100px;
+    }
+
   }
 
   // .img__bg-calculate__form
   &-calculate__form {
     bottom: -150px;
     right: -100px;
+    @include _widthVw(360);
+
+    @media only screen and (max-width : 800px) {
+      right: -50px;
+      bottom: -50px;
+    }
+
   }
 
   // 
@@ -787,13 +926,30 @@ textarea {
     left: 0;
   }
 
-  // img__bg-steps
+  // .img__bg-steps
   &-steps {
     width: 100%;
     z-index: -1;
     top: -700px;
-
     left: 0;
+
+    @media only screen and (max-width : 1680px) {
+      top: -500px;
+
+    }
+
+    @media only screen and (max-width : 1280px) {
+      top: -400px;
+    }
+
+    @media only screen and (max-width : 800px) {
+      top: -200px;
+    }
+
+    @media only screen and (max-width : 600px) {
+      top: 80px;
+    }
+
   }
 
   // img__bg-review {}
@@ -807,6 +963,7 @@ textarea {
   &-team {
     top: -300px;
     right: 0;
+    @include _widthVw(1780);
 
     // img__bg-team-bottom
     &-bottom {
@@ -832,14 +989,57 @@ textarea {
     &-top {
       width: 100%;
       top: -400px;
+
+      @media only screen and (max-width : 1440px) {
+        top: -300px;
+
+      }
+
+      @media only screen and (max-width : 800px) {
+        top: -150px;
+      }
+
     }
+
+    @media only screen and (max-width : 1680px) {
+      bottom: -400px;
+
+    }
+
+    @media only screen and (max-width : 1440px) {
+      bottom: -330px;
+    }
+
+    @media only screen and (max-width : 800px) {
+      bottom: -140px;
+
+    }
+
   }
 
-  // img__bg-certificate
+  // .img__bg-certificate
   &-certificate {
     width: 100%;
     bottom: -300px;
+
+    @media only screen and (max-width : 1680px) {
+      bottom: -200px;
+
+    }
+
+    @media only screen and (max-width : 1440px) {
+      bottom: -150px;
+    }
+
+    @media only screen and (max-width : 800px) {
+      bottom: 150px;
+    }
+
   }
+}
+
+.right__test {
+  @include _widthVw(340);
 }
 
 .decor {
@@ -879,6 +1079,12 @@ textarea {
 
     max-width: 320px;
     width: 100%;
+
+    @media only screen and (max-width : 800px) {
+      align-self: center;
+      margin-top: 30px;
+    }
+
   }
 }
 
@@ -899,6 +1105,20 @@ textarea {
   &-consultation {
     margin-right: 25px;
     @include adaptive(height, 42, 35, 0);
+
+    @media only screen and (max-width : 600px) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+  }
+
+  // input-visit_room
+  &-visit_room {
+    @media only screen and (max-width : 600px) {
+      margin-bottom: 20px;
+    }
+
   }
 
   // .input-cooperation {}
@@ -961,6 +1181,12 @@ textarea {
         @extend.p;
       }
     }
+
+    @media only screen and (max-width : 600px) {
+      grid-template-columns: repeat(1, 100%);
+
+    }
+
   }
 }
 
@@ -1191,6 +1417,13 @@ textarea {
         top: 50%;
         transform: translate(00%, -50%);
       }
+
+      @media only screen and (max-width : 800px) {
+        &::before {
+          display: none;
+        }
+      }
+
     }
 
     // .reason__item-text
@@ -1211,7 +1444,18 @@ textarea {
         }
       }
     }
+
+    @media only screen and (max-width : 800px) {
+      margin: 20px;
+    }
+
   }
+
+  @media only screen and (max-width : 800px) {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
 }
 
 .visit_room {
@@ -1237,6 +1481,20 @@ textarea {
     width: 100%;
     align-items: center;
     justify-content: space-between;
+
+    @media only screen and (max-width : 600px) {
+      flex-direction: column;
+      @include adaptive(padding-left, 120, 25, 0);
+      @include adaptive(padding-right, 120, 25, 0);
+
+      * {
+
+
+        width: 100%;
+      }
+    }
+
+
   }
 }
 
@@ -1304,6 +1562,17 @@ textarea {
     @include adaptive(padding-top, 75, 35, 0);
     @include adaptive(padding-left, 45, 30, 0);
     @include adaptive(padding-right, 45, 30, 0);
+
+    @media only screen and (max-width : 800px) {
+      grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    @media only screen and (max-width : 600px) {
+      display: flex;
+      flex-direction: column;
+    }
+
   }
 }
 
@@ -1324,7 +1593,11 @@ textarea {
 
   // .catalog__wrapper
 
-  &__wrapper {}
+  &__wrapper {
+    @media only screen and (max-width : 800px) {
+      flex-direction: column;
+    }
+  }
 
   // .catalog__option
 
@@ -1348,6 +1621,12 @@ textarea {
       @include adaptive(height, 55, 35, 0);
 
     }
+
+    @media only screen and (max-width : 800px) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
   }
 
   // .catalog__list
@@ -1446,8 +1725,6 @@ textarea {
     }
   }
 
-
-
   // .catalog__item
   &__item {
     display: flex;
@@ -1518,6 +1795,15 @@ textarea {
     // .label-best_price
     &-best_price {}
   }
+
+  @media only screen and (max-width : 800px) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width : 600px) {
+    grid-template-columns: repeat(1, 100%);
+  }
+
 }
 
 .price {
@@ -1606,7 +1892,7 @@ textarea {
   &__section {
     z-index: 2;
     @include adaptive(padding-top, 150, 100, 0);
-    @include adaptive(padding-bottom, 150, 100, 0);
+    @include adaptive(padding-bottom, 150, 50, 0);
   }
 
   // .steps__wrapper
@@ -1618,7 +1904,7 @@ textarea {
   &__item {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex: 1 1 150px;
 
@@ -1651,11 +1937,32 @@ textarea {
     &:nth-child(5n),
     &:nth-child(1) {
       margin-top: -200px;
+
+      @media only screen and (max-width : 800px) {
+        margin-top: 0;
+      }
+
     }
 
     &:nth-child(even) {
       margin-top: -80px;
+
+      @media only screen and (max-width : 800px) {
+        margin-top: 0;
+
+      }
+
     }
+
+    @media only screen and (max-width : 800px) {
+      margin: 10px 20px;
+    }
+
+  }
+
+  @media only screen and (max-width : 800px) {
+    margin-left: 0px;
+    flex-wrap: wrap;
   }
 
 
@@ -1690,7 +1997,19 @@ textarea {
       width: 100%;
       height: 100%;
     }
+
+    @media only screen and (max-width : 600px) {
+      height: 200px;
+
+    }
+
   }
+
+  @media only screen and (max-width : 800px) {
+    grid-template-columns: repeat(1, 100%);
+
+  }
+
 }
 
 
@@ -1747,6 +2066,7 @@ textarea {
 
   // team-button
   &-button {
+    z-index: 4;
     position: absolute;
     width: 45px;
     height: 45px;
@@ -1769,6 +2089,11 @@ textarea {
     &-prev {
       left: -0px;
     }
+
+    @media only screen and (max-width : 600px) {
+      display: none;
+    }
+
   }
 }
 
@@ -1858,6 +2183,22 @@ textarea {
       z-index: -1;
       top: 56%;
       transform: translate(0%, -50%);
+
+      @media only screen and (max-width : 800px) {
+        position: static;
+        transform: translate(0%, 0%);
+        margin-top: 100px;
+        margin-bottom: 100px;
+      }
+
+      @media only screen and (max-width : 600px) {
+        padding-right: 30px;
+
+        margin-bottom: 50px;
+        margin-top: 0;
+        width: 90%;
+      }
+
     }
 
     // .top-slide-title {}
@@ -1877,12 +2218,24 @@ textarea {
     &-about_title {
       @extend .t3;
       margin-bottom: 20px;
+
+      @media only screen and (max-width : 800px) {
+        width: 50%;
+      }
+
+      @media only screen and (max-width : 600px) {
+        width: 100%;
+      }
+
     }
 
-    // .team-slide-img {}
+    // .top-slide-img {}
     &-img {
       width: 359.52px;
       height: 435.5px;
+      @include adaptive(width, 360, 270, 0);
+      @include adaptive(height, 435, 330, 0);
+
 
       img {
         width: 100%;
@@ -1890,14 +2243,40 @@ textarea {
         object-fit: cover;
         object-position: center;
       }
+
+      @media only screen and (max-width : 800px) {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      @media only screen and (max-width : 600px) {
+        position: relative;
+      }
+
     }
+
+    @media only screen and (max-width : 600px) {
+      flex-direction: column;
+    }
+
   }
 }
 
 .consultation {
 
   // .consultation__form
-  &__form {}
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (max-width : 600px) {
+      width: 100%;
+      @include adaptive(padding-left, 120, 25, 0);
+      @include adaptive(padding-right, 120, 25, 0);
+    }
+
+  }
 
   // .consultation__wrapper
 
@@ -1905,6 +2284,17 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width : 600px) {
+      flex-direction: column;
+
+      * {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+
   }
 }
 
@@ -1919,6 +2309,16 @@ textarea {
     margin-right: 230px;
     margin-bottom: 15px;
     justify-content: space-between;
+
+    @media only screen and (max-width : 800px) {
+      margin-right: 0px;
+    }
+
+    @media only screen and (max-width : 600px) {
+      flex-direction: column;
+      width: 100%;
+    }
+
   }
 
   // .room__section
@@ -1952,7 +2352,21 @@ textarea {
       grid-column: 2/4;
       width: 640px;
       height: 460px;
+
+      @media only screen and (max-width : 1024px) {
+        // grid-row: auto;
+        width: 100%;
+        height: auto;
+      }
+
     }
+
+    @media only screen and (max-width : 1024px) {
+      // grid-column: auto;
+      // grid-row: auto;
+
+    }
+
   }
 
   // .room__tab
@@ -1994,6 +2408,16 @@ textarea {
       &:nth-child(2) {
         display: none;
       }
+
+      @media only screen and (max-width : 1024px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      @media only screen and (max-width : 600px) {
+        display: flex;
+        flex-direction: column;
+      }
+
     }
   }
 
@@ -2075,7 +2499,18 @@ textarea {
 
       }
     }
+
+    @media only screen and (max-width : 800px) {
+      margin: 20px;
+    }
+
   }
+
+  @media only screen and (max-width : 800px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
 }
 
 .form {
@@ -2098,6 +2533,13 @@ textarea {
       grid-template-columns: repeat(3, 1fr);
       width: 100%;
       grid-gap: 45px 25px;
+
+      @media only screen and (max-width : 800px) {
+        display: flex;
+        flex-direction: column;
+
+      }
+
     }
   }
 }
@@ -2124,7 +2566,15 @@ textarea {
       justify-content: center;
       @include adaptive(margin-bottom, 145, 80, 0);
 
+      @media only screen and (max-width : 600px) {
+        flex-wrap: wrap;
+      }
     }
+
+    @media only screen and (max-width : 600px) {
+      flex-wrap: wrap;
+    }
+
   }
 
   // .certificate__item
@@ -2193,6 +2643,17 @@ textarea {
       align-items: center;
       justify-content: center;
       width: 100%;
+
+      @media only screen and (max-width : 600px) {
+        flex-direction: column;
+
+        * {
+          width: 100%;
+          margin-right: 0;
+          margin-left: 0;
+        }
+      }
+
     }
   }
 }

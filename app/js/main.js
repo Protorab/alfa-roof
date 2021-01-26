@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
-  if (customSelect.length > 0) {
+  if (customSelect) {
     customSelect.forEach((customSelect) => {
       customSelect.addEventListener("click", function () {
         this.querySelector(".custom-select").classList.toggle("open");
@@ -334,6 +334,24 @@ document.addEventListener("DOMContentLoaded", () => {
     loopedSlides: 5, //looped slides should be the same
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      // when window width is >= 640px
+      800: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+    },
     navigation: {
       nextEl: ".team-button-next",
       prevEl: ".team-button-prev",
@@ -349,12 +367,17 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
   $(".room__tab").on("click", function () {
+    let displayState = "grid";
+    if ($(window).width() <= 600) {
+      displayState = "flex";
+    }
+    console.log(displayState);
     let roomNumber = $(this).data("room");
     $(".room__tab").removeClass("_current");
     $(this).toggleClass("_current");
     $(".room__tab-content").fadeOut();
     $(".room__tab-" + roomNumber)
-      .css("display", "grid")
+      .css("display", displayState)
       .hide()
       .fadeIn();
   });

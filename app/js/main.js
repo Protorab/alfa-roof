@@ -1,21 +1,22 @@
 /** @format */
 
 import $ from "jquery";
-import wow from "wowjs";
+// import wow from "wowjs";
 import inputmask from "inputmask";
 import loadingAttributePolyfill from "loading-attribute-polyfill";
-const WOW = require("wowjs");
-window.wow = new wow.WOW();
-window.wow.init();
+// const WOW = require("wowjs");
+// window.wow = new wow.WOW();
+// window.wow.init();
 window.jQuery = $;
 window.$ = $;
 require("./vendor/jquery-ui.min.js");
+import Swiper from "./vendor/swiper-bundle.min.js";
 
 // import module example (npm i -D jquery)
 
 document.addEventListener("DOMContentLoaded", () => {
   const customSelect = document.querySelectorAll(".custom-select-wrapper");
-  const phone = document.querySelectorAll(".telephone");
+  const phone = document.querySelectorAll("input[type=tel]");
   const popupForm = document.querySelector("#popup__form");
   const formPopup = document.querySelector(".form__popup");
   const popupLeave = document.querySelector("#popup__leave");
@@ -324,10 +325,41 @@ document.addEventListener("DOMContentLoaded", () => {
     let catalogMenu = $(this).parents(".catalog__menu");
     catalogMenu.toggleClass("_show");
     content.slideToggle();
-    // if (content) {
-    //   content.slideDown();
-    // } else {
-    //   content.slideUp();
-    // }
+  });
+  let teamThumbs = new Swiper(".team-thumbs", {
+    spaceBetween: 100,
+    slidesPerView: 5,
+    loop: true,
+    freeMode: false,
+    loopedSlides: 5, //looped slides should be the same
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    navigation: {
+      nextEl: ".team-button-next",
+      prevEl: ".team-button-prev",
+    },
+  });
+  let teamTop = new Swiper(".team-top", {
+    loop: true,
+    fade: true,
+    loopedSlides: 5, //looped slides should be the same
+
+    thumbs: {
+      swiper: teamThumbs,
+    },
+  });
+  $(".room__tab").on("click", function () {
+    let roomNumber = $(this).data("room");
+    $(".room__tab").removeClass("_current");
+    $(this).toggleClass("_current");
+    $(".room__tab-content").fadeOut();
+    $(".room__tab-" + roomNumber)
+      .css("display", "grid")
+      .hide()
+      .fadeIn();
+  });
+  $(".room__photo img").on("click", function () {
+    let img = $(this).attr("src");
+    $(".room__photo-current img").attr("src", img);
   });
 });

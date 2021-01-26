@@ -1,0 +1,40 @@
+<!-- @format -->
+<!-- form-cooperation -->
+<form action="" class="wrapper form__cooperation">
+  <div class="form__cooperation-title">
+    <h2>Узнайте все плюсы сотрудничества с нами!</h2>
+  </div>
+  <div class="form__cooperation-inputs">
+    <input type="hidden" name="form__name" value="Узнать плюсы" />
+    <input class="input input-cooperation" placeholder="Ваше имя" />
+    <div class="custom-select-wrapper">
+      <input type="hidden" name="who" />
+      <div class="custom-select">
+        <div class="custom-select__trigger">
+          <span>Кем являетесь</span>
+          <div class="arrow"></div>
+        </div>
+        <div class="custom-options">
+          <span class="custom-option selected" data-value="Кем являетесь">
+            Кем являетесь
+          </span>
+          <span class="custom-option" data-value="Тип-01"> Тип-01 </span>
+          <span class="custom-option" data-value="Тип-02"> Тип-02 </span>
+          <span class="custom-option" data-value="Тип-03 "> Тип-03 </span>
+          <span class="custom-option" data-value="Тип-04"> Тип-04 </span>
+        </div>
+      </div>
+    </div>
+    <input
+      class="input input-cooperation"
+      type="tel"
+      name="phone"
+      placeholder="Телефон"
+      required
+    />
+    <input type="submit" id="form__cooperation-submit" />
+    <label for="form__cooperation-submit" class="btn btn-cooperation">
+      Узнать подробности
+    </label>
+  </div>
+</form>

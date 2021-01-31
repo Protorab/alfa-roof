@@ -3,53 +3,45 @@
 <section class="section quiz__section">
   <div class="wrapper quiz__wrapper">
     <!-- @format -->
-<!-- complex_project -->
-<form action="" class="complex_project">
-  <div class="complex_project-wrap">
-    <div class="complex_project-title">
-      У вас сложный проект и нестандартные решения?
+<!-- form-help -->
+<form id="help__form" action="" class="form__help quiz__side">
+  <div class="form form-quiz__side form-quiz__side--help">
+    <div class="form__title form__title-quiz__side">
+      <h2>Не знаете точно что вам нужно?</h2>
     </div>
-    <div class="complex_project-subtitle">
-      Оставьте заявку и наш специалист поможет вам
+    <div class="form__subtitle form__subtitle-quiz__side">
+      <h3>
+        Оставьте заявку и наш специалист поможет вам с подбором материалов?
+      </h3>
     </div>
+
+    <input id="help__submit" type="submit" class="input input-quiz__side" />
+
+    <input type="hidden" name="form__name" value="форма на главном экране" />
     <input
+      name="name"
+      required
+      placeholder="Имя"
+      type="text"
+      class="input input-quiz__side"
+    />
+    <input
+      name="phone"
       required
       placeholder="Телефон"
       type="tel"
-      name="Телефон"
-      id=""
-      class="telephone complex_project-input"
+      class="input input-quiz__side"
     />
-    <input id="complex_project-submit" type="submit" value="" />
-    <label for="complex_project-submit" class="btn btn-complex_project">
-      Оставить заявку
-    </label>
+    <label for="help__submit" class="btn btn-form">Заказать звонок</label>
   </div>
-  <label for="complex__check" class="complex_project-check">
-    <div class="check__box check__box-complex">
-      <input
-        required
-        type="checkbox"
-        name="Я принимаю условия передачи информации"
-        id="complex__check"
-      />
-      <img
-        draggable="false"
-        src="img/check.png"
-        alt="check"
-        class="check__icon check__icon-complex"
-      />
+  <div class="form__description form__description--help">
+    <div class="form__description-img form__description-img--help">
+      <img src="img/gift.png" alt="" />
     </div>
-    Я принимаю условия передачи информации
-  </label>
-  <div class="bonus">
-    <div class="bonus__img">
-      <img draggable="false" src="img/gift.png" alt="" />
-    </div>
-    <div class="bonus__text">
-      Бонус при прохождении квиза: <br />
-      <strong> индивидуальная консультация нашего специалиста </strong>
-    </div>
+    <p>
+      <strong> Бонус при прохождении квиза:</strong> <br />
+      индивидуальная консультация нашего специалиста
+    </p>
   </div>
 </form>
 
@@ -64,7 +56,6 @@
     <div id="step-01" class="questions__step-number _current">Вопрос 1</div>
     <div id="step-02" class="questions__step-number">Вопрос 2</div>
     <div id="step-03" class="questions__step-number">Вопрос 3</div>
-    <div id="step-04" class="questions__step-number">Вопрос 4</div>
   </div>
 
   <!-- @format -->
@@ -84,7 +75,7 @@
           <img
             draggable="false"
             loading="lazy"
-            src="img/quiz/screen-2/img-1.jpg"
+            src="img/quiz/screen-1/img-1.jpg"
             alt="Односкатная"
           />
         </noscript>
@@ -114,7 +105,7 @@
           <img
             draggable="false"
             loading="lazy"
-            src="img/quiz/screen-2/img-2.jpg"
+            src="img/quiz/screen-1/img-2.jpg"
             alt="Двускатная"
           />
         </noscript>
@@ -144,7 +135,7 @@
           <img
             draggable="false"
             loading="lazy"
-            src="img/quiz/screen-2/img-3.jpg"
+            src="img/quiz/screen-1/img-3.jpg"
             alt="Вальмовая "
           />
         </noscript>
@@ -174,7 +165,7 @@
           <img
             draggable="false"
             loading="lazy"
-            src="img/quiz/screen-2/img-4.jpg"
+            src="img/quiz/screen-1/img-4.jpg"
             alt="Мансардная"
           />
         </noscript>
@@ -222,8 +213,8 @@
           <img
             draggable="false"
             loading="lazy"
-            src="img/quiz/screen-3/img-1.jpg"
-            alt="Односкатная"
+            src="img/quiz/screen-2/img-1.jpg"
+            alt="Керамическая "
           />
         </noscript>
       </span>
@@ -232,7 +223,7 @@
           <input
             name="Тип крыши"
             type="radio"
-            value="Односкатная"
+            value="Керамическая "
             id="var_2_1"
             class="answer"
           />
@@ -243,7 +234,7 @@
             class="check__icon check__icon-complex"
           />
         </div>
-        Односкатная
+        Керамическая
       </div>
     </label>
     <label for="var_2_2" class="question__variables-item">
@@ -252,7 +243,7 @@
           <img
             draggable="false"
             loading="lazy"
-            src="img/quiz/screen-3/img-2.jpg"
+            src="img/quiz/screen-2/img-2.jpg"
             alt="Двускатная"
           />
         </noscript>
@@ -282,7 +273,7 @@
           <img
             draggable="false"
             loading="lazy"
-            src="img/quiz/screen-3/img-3.jpg"
+            src="img/quiz/screen-2/img-3.jpg"
             alt="Вальмовая "
           />
         </noscript>
@@ -312,8 +303,8 @@
           <img
             draggable="false"
             loading="lazy"
-            src="img/quiz/screen-3/img-4.jpg"
-            alt="Мансардная"
+            src="img/quiz/any.png"
+            alt="Другой вариант"
           />
         </noscript>
       </span>
@@ -322,7 +313,7 @@
           <input
             name="Тип крыши"
             type="radio"
-            value="Мансардная"
+            value="Другой вариант"
             id="var_2_4"
             class="answer"
           />
@@ -333,7 +324,7 @@
             class="check__icon check__icon-complex"
           />
         </div>
-        Мансардная
+        Другой вариант
       </div>
     </label>
     <a
@@ -356,18 +347,130 @@
   class="question__wrapp question__wrapp-3 animate__animated"
 >
   <legend class="question__wrapp-title">
-    Когда необходимо выполнить работу?
+    Выберите понравившийся цвет кровли
   </legend>
 
-  <div class="question__variables _textarea">
-    <textarea
-      name="Срок выполнения"
-      id=""
-      cols="30"
-      rows="10"
-      class="question__variables-textarea answer"
-      placeholder="Ваш ответ"
-    ></textarea>
+  <div class="question__variables">
+    <label for="var_3_1" class="question__variables-item">
+      <span class="question__variables-img">
+        <noscript class="loading-lazy">
+          <img
+            draggable="false"
+            loading="lazy"
+            src="img/quiz/screen-3/img-1.jpg"
+            alt="Вариант 1 "
+          />
+        </noscript>
+      </span>
+      <div class="question__variables-content">
+        <div class="check__box">
+          <input
+            name="color"
+            type="radio"
+            value="Вариант 1 "
+            id="var_3_1"
+            class="answer"
+          />
+          <img
+            draggable="false"
+            src="img/check.png"
+            alt="check"
+            class="check__icon check__icon-complex"
+          />
+        </div>
+        Вариант 1
+      </div>
+    </label>
+    <label for="var_3_2" class="question__variables-item">
+      <span class="question__variables-img">
+        <noscript class="loading-lazy">
+          <img
+            draggable="false"
+            loading="lazy"
+            src="img/quiz/screen-3/img-2.jpg"
+            alt="Вариант 2"
+          />
+        </noscript>
+      </span>
+      <div class="question__variables-content">
+        <div class="check__box">
+          <input
+            name="color"
+            type="radio"
+            value="Вариант 2"
+            id="var_3_2"
+            class="answer"
+          />
+          <img
+            draggable="false"
+            src="img/check.png"
+            alt="check"
+            class="check__icon check__icon-complex"
+          />
+        </div>
+        Вариант 2
+      </div>
+    </label>
+    <label for="var_3_3" class="question__variables-item">
+      <span class="question__variables-img">
+        <noscript class="loading-lazy">
+          <img
+            draggable="false"
+            loading="lazy"
+            src="img/quiz/screen-3/img-3.jpg"
+            alt="Вариант 3"
+          />
+        </noscript>
+      </span>
+      <div class="question__variables-content">
+        <div class="check__box">
+          <input
+            name="color"
+            type="radio"
+            value="Вариант 3"
+            id="var_3_3"
+            class="answer"
+          />
+          <img
+            draggable="false"
+            src="img/check.png"
+            alt="check"
+            class="check__icon check__icon-complex"
+          />
+        </div>
+        Вариант 3
+      </div>
+    </label>
+    <label for="var_3_4" class="question__variables-item">
+      <span class="question__variables-img">
+        <noscript class="loading-lazy">
+          <img
+            draggable="false"
+            loading="lazy"
+            src="img/quiz/screen-3/img-4.jpg"
+            alt="Вариант 4"
+          />
+        </noscript>
+      </span>
+      <div class="question__variables-content">
+        <div class="check__box">
+          <input
+            name="color"
+            type="radio"
+            value="Вариант 4"
+            id="var_3_4"
+            class="answer"
+          />
+          <img
+            draggable="false"
+            src="img/check.png"
+            alt="check"
+            class="check__icon check__icon-complex"
+          />
+        </div>
+        Вариант 4
+      </div>
+    </label>
     <a
       href="#"
       data-index="02"
@@ -378,40 +481,7 @@
     <a
       href="#"
       data-index="04"
-      class="btn-quiz btn quiz__navigation _check_area"
-      >Далее</a
-    >
-  </div>
-</fieldset>
-
-  <!-- @format -->
-<!-- question-04 -->
-<fieldset
-  id="question-04"
-  class="question__wrapp question__wrapp-4 animate__animated"
->
-  <legend class="question__wrapp-title">Где нужно выполнить работу?</legend>
-  <div class="question__wrapp-subtitle">Вопрос 4</div>
-  <div class="question__variables _textarea">
-    <textarea
-      name="Место выполнения"
-      id=""
-      cols="30"
-      rows="10"
-      class="question__variables-textarea answer"
-      placeholder="Ваш ответ"
-    ></textarea>
-    <a
-      href="#"
-      data-index="03"
-      class="btn-quiz btn btn__active quiz__navigation"
-    >
-      Назад
-    </a>
-    <a
-      href="#"
-      data-index="05"
-      class="btn-quiz btn quiz__navigation show__gift _check_area"
+      class="btn-quiz btn show__gift quiz__navigation _check"
     >
       Далее
     </a>
@@ -421,134 +491,116 @@
   <!-- @format -->
 <!-- question-02 -->
 <fieldset
-  id="question-05"
-  class="question__wrapp question__wrapp-5 animate__animated"
+  id="question-04"
+  class="question__wrapp question__wrapp-4 animate__animated"
 >
   <legend class="question__wrapp-title question__wrapp-title-gift">
     Выберите подарок за прохождение квиза
   </legend>
-  <div class="question__variables _gift">
-    <label for="var_5_1" class="question__variables-item">
-      <span class="question__variables-img _gift">
-        <noscript class="loading-lazy">
-          <img
-            draggable="false"
-            loading="lazy"
-            src="img/quiz/screen-1/img-1.jpg"
-            alt="Бесплатный замер"
-          />
-        </noscript>
-      </span>
-      <div class="question__variables-content">
-        <div class="check__box">
-          <input
-            name="Подарок"
-            type="radio"
-            value="Бесплатный замер"
-            id="var_5_1"
-            required
-          />
-          <img
-            draggable="false"
-            src="img/check.png"
-            alt="check"
-            class="check__icon check__icon-complex"
-          />
+  <div class="gift__wrap">
+    <div class="question__variables _gift">
+      <label for="var_4_1" class="question__variables-item">
+        <span class="question__variables-img _gift">
+          <noscript class="loading-lazy">
+            <img
+              draggable="false"
+              loading="lazy"
+              src="img/gift/img-1.png"
+              alt="Гидрозатвор для ветиляционного выхода"
+            />
+          </noscript>
+        </span>
+        <div class="question__variables-content">
+          <div class="check__box">
+            <input
+              name="Подарок"
+              type="radio"
+              value="Гидрозатвор для ветиляционного выхода"
+              id="var_4_1"
+              required
+            />
+            <img
+              draggable="false"
+              src="img/check.png"
+              alt="check"
+              class="check__icon check__icon-complex"
+            />
+          </div>
+          Гидрозатвор для ветиляционного выхода
         </div>
-        Бесплатный замер
-      </div>
-    </label>
-    <label for="var_5_2" class="question__variables-item">
-      <span class="question__variables-img _gift">
-        <noscript class="loading-lazy">
-          <img
-            draggable="false"
-            loading="lazy"
-            src="img/quiz/screen-1/img-2.jpg"
-            alt="Скидка от 5% на кровлю и кровельные материалы"
-          />
-        </noscript>
-      </span>
-      <div class="question__variables-content">
-        <div class="check__box">
-          <input
-            type="radio"
-            name="Подарок"
-            value="Скидка от 5% на кровлю и кровельные материалы"
-            id="var_5_2"
-            required
-          />
-          <img
-            draggable="false"
-            src="img/check.png"
-            alt="check"
-            class="check__icon check__icon-complex"
-          />
+      </label>
+      <label for="var_4_2" class="question__variables-item">
+        <span class="question__variables-img _gift">
+          <noscript class="loading-lazy">
+            <img
+              draggable="false"
+              loading="lazy"
+              src="img/gift/img-2.png"
+              alt="Скидка от 5% на кровлю и кровельные материалы"
+            />
+          </noscript>
+        </span>
+        <div class="question__variables-content">
+          <div class="check__box">
+            <input
+              type="radio"
+              name="Подарок"
+              value="Скидка от 5% на кровлю и кровельные материалы"
+              id="var_4_2"
+              required
+            />
+            <img
+              draggable="false"
+              src="img/check.png"
+              alt="check"
+              class="check__icon check__icon-complex"
+            />
+          </div>
+          Скидка от 5% на кровлю <br />
+          и кровельные материалы
         </div>
-        Скидка от 5% на кровлю <br />
-        и кровельные материалы
-      </div>
-    </label>
-    <label for="var_5_3" class="question__variables-item">
-      <span class="question__variables-img _gift">
-        <noscript class="loading-lazy">
-          <img
-            draggable="false"
-            loading="lazy"
-            src="img/quiz/screen-1/img-3.jpg"
-            alt="Индивидуальная консультация "
-          />
-        </noscript>
-      </span>
-      <div class="question__variables-content">
-        <div class="check__box">
-          <input
-            type="radio"
-            name="Подарок"
-            value="Индивидуальная консультация"
-            id="var_5_3"
-            required
-          />
-          <img
-            draggable="false"
-            src="img/check.png"
-            alt="check"
-            class="check__icon check__icon-complex"
-          />
-        </div>
-        Индивидуальная <br />
-        консультация
-      </div>
-    </label>
-  </div>
-  <!-- @format -->
+      </label>
+    </div>
+    <!-- @format -->
 <!-- question__send -->
-<div class="question__send">
-  <input type="hidden" name="project_name" value="Site Name" />
-  <input type="hidden" name="admin_email" value="admin@mail.com" />
-  <input type="hidden" name="form_subject" value="Form Subject" />
-  <div class="question__send-title">
-    Получите ваш бонус за прохождение квиза!
+
+<div class="form form-quiz__side quiz__side">
+  <div class="form__title form__title-quiz__side">
+    <h2>Получите ваш бонус за прохождение квиза!</h2>
   </div>
-  <div class="question__send-subtitle">
+  <div class="form__subtitle form__subtitle-quiz__side">
     Благодарим вас за ответы, ваш подарок уже готов!
   </div>
-  <div class="question__send-inputs">
-    <input
-      placeholder="Телефон"
-      required
-      type="tel"
-      name="Телефон"
-      id=""
-      class="question__send-input telephone"
-    />
-    <input type="submit" id="question__send-submit" value="" />
-    <label for="question__send-submit" class="btn btn-question__send sender">
-      Оставить заявку
-    </label>
-  </div>
+  <input id="thanks__submit" type="submit" class="input input-quiz__side" />
+
+  <input type="hidden" name="form__name" value="форма на главном экране" />
+  <input
+    name="name"
+    required
+    placeholder="Имя"
+    type="text"
+    class="input input-quiz__side"
+  />
+  <input
+    name="phone"
+    required
+    placeholder="Телефон"
+    type="tel"
+    class="input input-quiz__side"
+  />
+  <label for="thanks__submit" class="btn btn-form">Заказать звонок</label>
 </div>
 
+  </div>
+  <div class="form__description form__description--pickup">
+    <div class="form__description-img form__description-img--pickup">
+      <img src="img/gift.png" alt="" />
+    </div>
+    <p>
+      <strong> Бонус при прохождении квиза:</strong> <br />
+      индивидуальная консультация нашего специалиста
+    </p>
+  </div>
 </fieldset>
 
 </form>

@@ -141,6 +141,7 @@ $maxWidthContainer:1115;
 @include font('Raleway', normal, 400, '../fonts/Raleway-VariableFont_wght.woff');
 @include font('Raleway', normal, 500, '../fonts/Raleway-VariableFont_wght.woff');
 @include font('Raleway', normal, 700, '../fonts/Raleway-VariableFont_wght.woff');
+
 //MIXINS
 @mixin _transition($element:all, $time:.5s, $timing:ease-in-out, ) {
 	transition: $element ease-in-out $time;
@@ -442,7 +443,7 @@ li,
 label {
 
 	line-height: 1.35;
-	@include adaptive(font-size, 18, 16, 0);
+	@include adaptive(font-size, 16, 14, 0);
 }
 
 .burger__menu {

@@ -1,33 +1,85 @@
 <!-- @format -->
-<!-- question-04 -->
+<!-- question-02 -->
 <fieldset
   id="question-04"
   class="question__wrapp question__wrapp-4 animate__animated"
 >
-  <legend class="question__wrapp-title">Где нужно выполнить работу?</legend>
-  <div class="question__wrapp-subtitle">Вопрос 4</div>
-  <div class="question__variables _textarea">
-    <textarea
-      name="Место выполнения"
-      id=""
-      cols="30"
-      rows="10"
-      class="question__variables-textarea answer"
-      placeholder="Ваш ответ"
-    ></textarea>
-    <a
-      href="#"
-      data-index="03"
-      class="btn-quiz btn btn__active quiz__navigation"
-    >
-      Назад
-    </a>
-    <a
-      href="#"
-      data-index="05"
-      class="btn-quiz btn quiz__navigation show__gift _check_area"
-    >
-      Далее
-    </a>
+  <legend class="question__wrapp-title question__wrapp-title-gift">
+    Выберите подарок за прохождение квиза
+  </legend>
+  <div class="gift__wrap">
+    <div class="question__variables _gift">
+      <label for="var_4_1" class="question__variables-item">
+        <span class="question__variables-img _gift">
+          <noscript class="loading-lazy">
+            <img
+              draggable="false"
+              loading="lazy"
+              src="img/gift/img-1.png"
+              alt="Гидрозатвор для ветиляционного выхода"
+            />
+          </noscript>
+        </span>
+        <div class="question__variables-content">
+          <div class="check__box">
+            <input
+              name="Подарок"
+              type="radio"
+              value="Гидрозатвор для ветиляционного выхода"
+              id="var_4_1"
+              required
+            />
+            <img
+              draggable="false"
+              src="img/check.png"
+              alt="check"
+              class="check__icon check__icon-complex"
+            />
+          </div>
+          Гидрозатвор для ветиляционного выхода
+        </div>
+      </label>
+      <label for="var_4_2" class="question__variables-item">
+        <span class="question__variables-img _gift">
+          <noscript class="loading-lazy">
+            <img
+              draggable="false"
+              loading="lazy"
+              src="img/gift/img-2.png"
+              alt="Скидка от 5% на кровлю и кровельные материалы"
+            />
+          </noscript>
+        </span>
+        <div class="question__variables-content">
+          <div class="check__box">
+            <input
+              type="radio"
+              name="Подарок"
+              value="Скидка от 5% на кровлю и кровельные материалы"
+              id="var_4_2"
+              required
+            />
+            <img
+              draggable="false"
+              src="img/check.png"
+              alt="check"
+              class="check__icon check__icon-complex"
+            />
+          </div>
+          Скидка от 5% на кровлю <br />
+          и кровельные материалы
+        </div>
+      </label>
+    </div>
+    <!--#include virtual="/includes/_question__send.html" -->
+  </div>
+  <div class="form__description form__description--pickup">
+    <div class="form__description-img form__description-img--pickup">
+      <img src="img/gift.png" alt="" />
+    </div>
+    <p>
+      <strong> Бонус при прохождении квиза:</strong> <br />
+      индивидуальная консультация нашего специалиста
+    </p>
   </div>
 </fieldset>

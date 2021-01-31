@@ -1,27 +1,29 @@
 <!-- @format -->
 <!-- question__send -->
-<div class="question__send">
-  <input type="hidden" name="project_name" value="Site Name" />
-  <input type="hidden" name="admin_email" value="admin@mail.com" />
-  <input type="hidden" name="form_subject" value="Form Subject" />
-  <div class="question__send-title">
-    Получите ваш бонус за прохождение квиза!
+
+<div class="form form-quiz__side quiz__side">
+  <div class="form__title form__title-quiz__side">
+    <h2>Получите ваш бонус за прохождение квиза!</h2>
   </div>
-  <div class="question__send-subtitle">
+  <div class="form__subtitle form__subtitle-quiz__side">
     Благодарим вас за ответы, ваш подарок уже готов!
   </div>
-  <div class="question__send-inputs">
-    <input
-      placeholder="Телефон"
-      required
-      type="tel"
-      name="Телефон"
-      id=""
-      class="question__send-input telephone"
-    />
-    <input type="submit" id="question__send-submit" value="" />
-    <label for="question__send-submit" class="btn btn-question__send sender">
-      Оставить заявку
-    </label>
-  </div>
+  <input id="thanks__submit" type="submit" class="input input-quiz__side" />
+
+  <input type="hidden" name="form__name" value="форма на главном экране" />
+  <input
+    name="name"
+    required
+    placeholder="Имя"
+    type="text"
+    class="input input-quiz__side"
+  />
+  <input
+    name="phone"
+    required
+    placeholder="Телефон"
+    type="tel"
+    class="input input-quiz__side"
+  />
+  <label for="thanks__submit" class="btn btn-form">Заказать звонок</label>
 </div>

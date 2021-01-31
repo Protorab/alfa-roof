@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const leaveMessage = document.querySelector(".leave__message");
   const popupThanks = document.querySelector("#popup__thanks");
   const thanksMessage = document.querySelector(".thanks__message");
-  const complexProject = document.querySelector(".complex_project");
+  const helpForm = document.querySelector("#help__form");
   const popupBg = document.querySelectorAll(".popup__overlay");
   const showForm = document.querySelectorAll(".show__form");
   const closePopup = document.querySelectorAll(".close");
@@ -113,9 +113,9 @@ document.addEventListener("DOMContentLoaded", () => {
           console.log(questionIndex);
           if (eThis.classList.contains("show__gift")) {
             questionsStepsWrap.style.display = "none";
-            complexProject.style.width = 0;
-            complexProject.style.height = 0;
-            complexProject.classList.add("__hide");
+            helpForm.style.width = 0;
+            helpForm.style.height = 0;
+            helpForm.classList.add("__hide");
             eThis.parentNode.parentNode.parentNode.classList.add("full-size");
           }
         };

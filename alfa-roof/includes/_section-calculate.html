@@ -15,12 +15,14 @@
     required
     placeholder="Телефон"
     type="tel"
+    name="phone"
   />
   <input
     class="input input-calculate"
     required
     placeholder="E-mail"
     type="email"
+    name="email"
   />
   <input id="calculate__submit" type="submit" />
   <div class="custom-select-wrapper">
@@ -74,11 +76,13 @@
     required
     placeholder="Площадь (см²)"
     type="text"
+    name="area(cm²)"
   />
-  <label for="calculate__submit" class="btn btn-calculate"
-    >Узнать стоимость</label
-  >
+  <label for="calculate__submit" class="btn btn-calculate">
+    Узнать стоимость
+  </label>
   <img
+    draggable="false"
     src="img/payment/payment-decor.png"
     alt=""
     class="img__bg img__bg-calculate__form"
@@ -87,11 +91,13 @@
 
   </div>
   <img
+    draggable="false"
     src="img/payment/payment-bg.png"
     alt=""
     class="img__bg img__bg-calculate"
   />
   <img
+    draggable="false"
     loading="lazy"
     src="img/Arrow-alt.png"
     alt="arrow"

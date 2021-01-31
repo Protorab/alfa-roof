@@ -138,7 +138,9 @@ $maxWidthContainer:1115;
 @include font('OpenSans', normal, 400, '../fonts/OpenSans-Regular.woff');
 @include font('OpenSans', normal, 600, '../fonts/OpenSans-Medium.woff');
 @include font('OpenSans', normal, 700, '../fonts/OpenSans-Bold.woff');
-
+@include font('Raleway', normal, 400, '../fonts/Raleway-VariableFont_wght.woff');
+@include font('Raleway', normal, 500, '../fonts/Raleway-VariableFont_wght.woff');
+@include font('Raleway', normal, 700, '../fonts/Raleway-VariableFont_wght.woff');
 //MIXINS
 @mixin _transition($element:all, $time:.5s, $timing:ease-in-out, ) {
 	transition: $element ease-in-out $time;

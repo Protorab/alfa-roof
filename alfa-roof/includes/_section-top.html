@@ -2,33 +2,39 @@
 <!-- top__section -->
 <section class="section top__section">
   <img
+    draggable="false"
     loading="lazy"
     src="img/top/top__bg.png"
     alt="bg"
     class="img__bg img__bg-bg"
   />
   <img
+    draggable="false"
     src="img/top/fog/fog-top.png"
     alt="fog"
     class="fog img__bg img__bg-top__full"
   />
   <img
+    draggable="false"
     src="img/top/fog/bottom-left.png"
     alt=""
     class="img__bg img__bg-bottom img__bg-bottom__left img__bg"
   />
   <img
+    draggable="false"
     src="img/top/fog/bottom-right.png"
     alt=""
     class="fog img__bg img__bg-bottom img__bg-bottom__right img__bg"
   />
 
   <img
+    draggable="false"
     src="img/top/decor.png"
     alt=""
     class="img__bg decor img__bg-bottom img__bg-bottom__left img__bg"
   />
   <img
+    draggable="false"
     src="img/top/fog/bottom-center.png"
     alt=""
     class="img__bg img__bg-bottom img__bg-custom"
@@ -60,9 +66,22 @@
   <input id="top__submit" type="submit" class="input input-top" />
 
   <input type="hidden" name="form__name" value="форма на главном экране" />
-  <input required placeholder="Имя" type="text" class="input input-top" />
-  <input required placeholder="e-mail" type="email" class="input input-top" />
   <input
+    name="name"
+    required
+    placeholder="Имя"
+    type="text"
+    class="input input-top"
+  />
+  <input
+    name="email"
+    required
+    placeholder="e-mail"
+    type="email"
+    class="input input-top"
+  />
+  <input
+    name="phone"
     required
     placeholder="Телефон"
     type="tel"
@@ -74,6 +93,7 @@
     </div>
   </div>
   <img
+    draggable="false"
     loading="lazy"
     src="img/arrow.png"
     alt="arrow"

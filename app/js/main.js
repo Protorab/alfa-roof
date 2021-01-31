@@ -35,11 +35,30 @@ document.addEventListener("DOMContentLoaded", () => {
   const questions = document.querySelector(".questions");
   const questionsStepsWrap = document.querySelector(".questions__step");
   const questionsStep = document.querySelectorAll(".questions__step-number");
+  const amountChang = document.querySelectorAll(".amount__input-chang");
+  let totalPrice = document.querySelector("#total__price");
+  let inputPrice = document.querySelector("#price");
   let phoneMask = new inputmask({
     mask: "+375-99-999-99-99",
     clearIncomplete: true,
     greedy: false,
   });
+  const fullImg = document.querySelector("#full__img");
+  const imgSmall = document.querySelectorAll(".card__img-small");
+
+  if (imgSmall.length > 0) {
+    for (let i = 0; i < imgSmall.length; i++) {
+      const img = imgSmall[i];
+
+      img.addEventListener("click", function (e) {
+        classRemove(".card__img-small._clicked", "_clicked");
+        this.classList.add("_clicked");
+        const imgSrc = this.querySelector("img").src;
+        e.preventDefault();
+        fullImg.src = imgSrc;
+      });
+    }
+  }
   const popupToggle = (
     popUp,
     popUpElement,
@@ -272,26 +291,26 @@ document.addEventListener("DOMContentLoaded", () => {
   /** pop-up before exit */
   let pageY = 0;
 
-  $(function () {
-    $(document).on("mousemove", function (event) {
-      if (pageY) {
-        if (event.pageY < pageY && pageY < 20) {
-          popupToggle(
-            popupLeave,
-            leaveMessage,
-            "animate__fadeIn",
-            "animate__bounceInDown",
-            "animate__fadeOut",
-            "animate__bounceOutUp",
-            "flex",
-            "__pop",
-            100
-          );
-        }
-      }
-      pageY = event.pageY;
-    });
-  });
+  // $(function () {
+  //   $(document).on("mousemove", function (event) {
+  //     if (pageY) {
+  //       if (event.pageY < pageY && pageY < 20) {
+  //         popupToggle(
+  //           popupLeave,
+  //           leaveMessage,
+  //           "animate__fadeIn",
+  //           "animate__bounceInDown",
+  //           "animate__fadeOut",
+  //           "animate__bounceOutUp",
+  //           "flex",
+  //           "__pop",
+  //           100
+  //         );
+  //       }
+  //     }
+  //     pageY = event.pageY;
+  //   });
+  // });
 
   $(".ajax_form").on("submit", function (e) {
     popupToggle(
@@ -371,7 +390,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if ($(window).width() <= 600) {
       displayState = "flex";
     }
-    console.log(displayState);
     let roomNumber = $(this).data("room");
     $(".room__tab").removeClass("_current");
     $(this).toggleClass("_current");
@@ -385,4 +403,43 @@ document.addEventListener("DOMContentLoaded", () => {
     let img = $(this).attr("src");
     $(".room__photo-current img").attr("src", img);
   });
+
+  $(".amount__input").on("keypress", function (e) {
+    var str = $(".amount__input").value;
+
+    $(".amount__input").value = str;
+    var char = /[+"0-9]/;
+    var val = String.fromCharCode(e.which);
+    var test = char.test(val);
+
+    if (!test) return false;
+  });
+
+  if (amountChang.length > 0) {
+    for (let i = 0; i < amountChang.length; i++) {
+      const changer = amountChang[i];
+      changer.addEventListener("click", function (e) {
+        e.preventDefault();
+        const price = this.dataset.price;
+        let count = this.parentNode.querySelector("#amount__input");
+        // if (this.classList.contains("amount__input-chang--add")) {
+        //   count.value++;
+        // } else {
+        //   if (count.value > 0) {
+        //     count.value--;
+        //   } else {
+        //     count.value = 0;
+        //   }
+        // }
+
+        this.classList.contains("amount__input-chang--add")
+          ? count.value++
+          : count.value > 0
+          ? count.value--
+          : (count.value = 0);
+        totalPrice.innerHTML = count.value * price;
+        inputPrice.value = totalPrice.innerHTML;
+      });
+    }
+  }
 });

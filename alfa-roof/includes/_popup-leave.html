@@ -6,53 +6,44 @@
     <div class="close">
       <span></span>
     </div>
-    <div class="leave__message-title">
-      Уже уходите? <br />
-      Вы все еще можете получить <strong>скидку</strong> от 5% на вашу кровлю
+    <div class="leave__message-content">
+      <div class="leave__message-title">
+        <p><strong>Уже уходите?</strong></p>
+      </div>
+      <div class="leave__message-text">
+        <p>
+          Вы все еще можете получить <strong>скидку до 40%</strong> на
+          <br />кровлю и кровельные материалы!
+        </p>
+      </div>
     </div>
-    <div class="leave__message-text">
-      Если вы не хотите ждать, можете начать общение с нами в мессенджерах:
-    </div>
-    <a href="tel:+375 (29) 176-46-01" class="leave__message-phone">
-      +375 (29) 176-46-01
-    </a>
-    <div class="popup__messengers">
-      <a
-        href="viber://chat?number=%2B375291764601"
-        class="popup__messengers-link"
-      >
-        <noscript class="loading-lazy">
-          <img
-            loading="lazy"
-            src="img/messengers/Viber.svg"
-            alt="phone"
-            class="icon"
-          />
-        </noscript>
-      </a>
+    <!-- @format -->
+<!-- form- -->
+<form action="" class="leave__from">
+  <input
+    type="hidden"
+    name="form__name"
+    value="Более подробная информация по кровле"
+  />
+  <input
+    class="input input-leave__from"
+    name="name"
+    required
+    placeholder="Имя"
+    type="text"
+  />
+  <input
+    class="input input-leave__from"
+    name="phone"
+    required
+    placeholder="Телефон"
+    type="tel"
+  />
+  <input id="leave__from-submit" type="submit" />
+  <label for="leave__from-submit" class="btn btn-leave__from"
+    >Получить скидку</label
+  >
+</form>
 
-      <a
-        href="https://api.whatsapp.com/send?phone=375291764601"
-        class="popup__messengers-link"
-      >
-        <noscript class="loading-lazy">
-          <img
-            loading="lazy"
-            src="img/messengers/WhatsApp.svg"
-            alt="phone"
-            class="icon"
-          /> </noscript
-      ></a>
-      <a href="" class="popup__messengers-link">
-        <noscript class="loading-lazy">
-          <img
-            loading="lazy"
-            src="img/messengers/Telegram.svg"
-            alt="phone"
-            class="icon"
-          />
-        </noscript>
-      </a>
-    </div>
   </div>
 </div>
